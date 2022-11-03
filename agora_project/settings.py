@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-i!^_vjy)d3gk4!nylbp24z1)^(g79z-yc1wiy#lzm#0aksc+1x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['api-hackathon.up.railway.app']
 
 
 # Application definition
