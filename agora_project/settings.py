@@ -87,8 +87,12 @@ WSGI_APPLICATION = 'agora_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'Bqm4YUiDlTb72hWB2SdX',
+        'HOST': 'containers-us-west-68.railway.app',
+        'PORT': '6965',
     }
 }
 
