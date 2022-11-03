@@ -28,6 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['api-hackathon.up.railway.app']
 
+CSRF_TRUSTED_ORIGINS = ['https://api-hackathon.up.railway.app']
+
 
 # Application definition
 
