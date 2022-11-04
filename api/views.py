@@ -15,8 +15,8 @@ from rest_framework import filters
 def getRoutes(request):
 
     routes = [
-        {'GET': '/api/advocates'},
-        {'GET': '/api/advocates/id'}
+        'https://api-hackathon.up.railway.app/advocates',
+        'https://api-hackathon.up.railway.app/advocates/id'
     ]
     return Response(routes)
 
