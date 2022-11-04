@@ -12,7 +12,7 @@ from rest_framework import filters
 
 
 @api_view(['GET'])
-def getRoutes(request):
+def ApiEndpoints(request):
 
     routes = [
         'https://api-hackathon.up.railway.app/advocates',
