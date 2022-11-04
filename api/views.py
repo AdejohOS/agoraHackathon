@@ -16,8 +16,8 @@ class ApiEndpoints(APIView):
     def get(self, request):
 
         routes = [
-            'http://127.0.0.1:8000/advocates/',
-            'http://127.0.0.1:8000/advocates/brown071'
+            'https://api-hackathon.up.railway.app/advocates',
+            'https://api-hackathon.up.railway.app/advocates/brown071'
         ]
         return Response(routes)
 
