@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from rest_framework import generics
 from rest_framework.response import Response
 
 from rest_framework.settings import api_settings
@@ -22,18 +22,11 @@ class ApiEndpoints(APIView):
         return Response(routes)
 
 
-class AdvocateList(APIView, MyPaginationMixin):
-    queryset = Advocate.objects.all()
+class AdvocateList(generics.ListAPIView):
+    search_fields = ['username']
+    filter_backends = (filters.SearchFilter,)
     serializer_class = AdvocateSerializer
-    pagination_class = api_settings.DEFAULT_PAGINATION_CLASS 
-
-    # We need to override the get method to insert pagination
-    def get(self, request):
-        ...
-        page = self.paginate_queryset(self.queryset)
-        if page is not None:
-            serializer = self.serializer_class(page, many=True)
-            return self.get_paginated_response(serializer.data)
+    queryset = Advocate.objects.all()
 
 
 class AdvocateDetail(APIView):
